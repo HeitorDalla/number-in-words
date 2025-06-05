@@ -3,12 +3,12 @@
 document.querySelector("#btnConverter").addEventListener("click", (e) => {
     e.preventDefault();
 
-    const containerResposta = document.querySelector("#containerResposta");
+    const resposta = document.querySelector("#resposta");
     const input = document.querySelector("#numero");
     const inputValue = parseFloat(input.value);
 
     if (isNaN(inputValue)) {
-        containerResposta.textContent = `Número inválido!`;
+        resposta.textContent = `Número inválido!`;
         return; // Para aqui
     }
 
@@ -22,6 +22,6 @@ document.querySelector("#btnConverter").addEventListener("click", (e) => {
         }
     });
     
-    containerResposta.textContent = numeroExtenso;
-    containerResposta.className = 'sucesso';
+    resposta.textContent = numeroExtenso;
+    resposta.className = 'sucesso';
 })
